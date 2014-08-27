@@ -206,8 +206,8 @@ inline BOOL SVGCurveEqualToCurve(SVGCurve curve1, SVGCurve curve2)
 	 */
 	@autoreleasepool
 	{
-		[scanner scanCharactersFromSet:[NSCharacterSet SVGWhitespaceCharacterSet]
-                        intoString:NULL];
+        if ([NSCharacterSet respondsToSelector:@selector(SVGWhitespaceCharacterSet)])
+            [scanner scanCharactersFromSet:[NSCharacterSet SVGWhitespaceCharacterSet] intoString:NULL];
 	}
 }
 

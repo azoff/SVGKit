@@ -34,6 +34,8 @@
 @property(nonatomic) CGSize tileRatio;
 @property(nonatomic) BOOL disableAutoRedrawAtHighestResolution;
 
+- (void)populateFromImage:(SVGKImage*) im;
+
 /** Apple has a bug in CALayer where their renderInContext: method does not respect Apple's own mask layers.
  
  This is required to render SVGGradientElement's, and it is NOT a bug in SVGKit - it's in Apple's code. Until we
